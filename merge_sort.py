@@ -53,4 +53,5 @@ def main():
         assert expected == result, f"Testcase {i+1} failed"
         print(f"Testcase {i+1} passed")
 
+
 main()
