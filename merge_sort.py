@@ -1,11 +1,11 @@
 # ==============================================================================
 # * Merge Sort
 # ? Follows Divide & Conquer Idea
-# ! Time Complexity
+# ! Time Complexity - O(NlogN)
 # ==============================================================================
 
 
-def merge(res1, res2):
+def merge(res1: list, res2: list) -> list:
     # ? Merge two array in sorted fashion by comparing each indivual element. Each array is already sorted in itself.
     res = []
     p1, p2 = 0, 0
@@ -29,14 +29,14 @@ def merge(res1, res2):
     return res
 
 
-def divide(nums):
+def divide(nums: list) -> tuple:
     # ? Divide the nums array into two halves
     mid = len(nums) // 2
     return nums[:mid], nums[mid:]
 
 
-def mergeSort(nums):
-    if len(nums) == 1:
+def mergeSort(nums: list) -> list:
+    if len(nums) <= 1:
         return nums
 
     nums1, nums2 = divide(nums)
@@ -45,5 +45,12 @@ def mergeSort(nums):
     return merge(res_1, res_2)
 
 
-arr = [99, 98, 87, 1, 88, -1, 209]
-print("result", mergeSort(arr))
+def main():
+    testcases = [[], [2, 1], [99, 98, 10000000, 1, 88, -1, 209]]
+    for i, testcase in enumerate(testcases):
+        expected = sorted(testcase)
+        result = mergeSort(testcase)
+        assert expected == result, f"Testcase {i+1} failed"
+        print(f"Testcase {i+1} passed")
+
+main()

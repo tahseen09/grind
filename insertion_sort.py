@@ -14,5 +14,12 @@ def insertion_sort(nums: list) -> list:
         nums[j+1] = key
     return nums
 
-nums = [2,9,0,1,8,7,0,2,4,78,98,76,-1,-5]
-print(insertion_sort(nums))
+def main():
+    testcases = [[], [2, 1], [99, 98, 10000000, 1, 88, -1, 209]]
+    for i, testcase in enumerate(testcases):
+        expected = sorted(testcase)
+        result = insertion_sort(testcase)
+        assert expected == result, f"Testcase {i+1} failed"
+        print(f"Testcase {i+1} passed")
+
+main()
