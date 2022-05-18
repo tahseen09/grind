@@ -1,4 +1,7 @@
-# Implement Insertion Sort
+# ==============================================================================
+# Insertion Sort
+# Time Complexity - O(N^2)
+# ==============================================================================
 
 def insertion_sort(nums: list) -> list:
     l = len(nums)
