@@ -1,6 +1,6 @@
 # ==============================================================================
-# Insertion Sort
-# Time Complexity - O(N^2)
+# * Insertion Sort
+# ! Time Complexity - O(N^2)
 # ==============================================================================
 
 def insertion_sort(nums: list) -> list:
