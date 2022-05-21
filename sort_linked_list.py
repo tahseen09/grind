@@ -56,7 +56,7 @@ def sortList(head: Optional[ListNode]) -> Optional[ListNode]:
     slow = head
     fast = head
     if not head.next.next:
-        # ! Handling only elements in linked list, if not handled -> it can go into infinite execution
+        # ! Handling only 2 elements in linked list, if not handled -> it can go into infinite execution
         slow = head
         fast = head.next
     else:
